@@ -4,7 +4,7 @@ class Product {
     public int $id; 
     public string $name; 
     public $price; 
-    public $stock; 
+    public int $stock; 
 
     public function __construct($id, $name, $price, $stock)
     {
@@ -14,15 +14,5 @@ class Product {
        $this->stock = $stock; 
     }
 
-    public function getProducts()
-    {
-        $product = [
-            "id" => $this->id, 
-            "name" => $this->name, 
-            "price" => $this->price, 
-            "stock" => $this->stock
-        ];
-
-        return $product; 
-    }
+    
 }
