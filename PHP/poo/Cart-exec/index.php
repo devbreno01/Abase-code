@@ -1,14 +1,14 @@
 <?php 
 
-require 'Cart.php';
-require 'CartItem.php';
 require 'Product.php';
-
+require 'Cart.php';
 $product = new Product(123,"Notebook", 1.200, 100); 
-
-$cartIitem = new CartItem($product, 5); 
-
+$product2 = new Product(4356435,"TESTE PRODUTO 2", 1.300, 200); 
 $cart = new Cart(); 
-$cart->addProduct($cartIitem->product, $cartIitem->quantity); 
+$cart->addProduct($product, 5); 
+$cart->addProduct($product2, 10); 
 
-
+//$cart->removeProduct(123);
+$cart->getTotal();
+$cart->getItems();
+//ar_dump($cart->items); 

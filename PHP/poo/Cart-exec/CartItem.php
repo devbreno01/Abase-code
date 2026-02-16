@@ -1,8 +1,8 @@
 <?php 
-
+require_once 'Product.php';
 
 class CartItem {
-    public $product; 
+    public Product $product; 
     public int $quantity; 
 
     public function __construct(Product $product, int $quantity)
